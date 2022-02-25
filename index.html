@@ -30,7 +30,10 @@
       <section class="container-box p-4">
         <header>
           <section class="search-city position-relative">
-            <i class="fa fa-search search-city-icon" id="search-btn"></i>
+            <span id="search-btn">
+              <i class="fa fa-search search-city-icon"></i>
+            </span>
+
             <input
               type="search"
               name="search-city"
@@ -39,21 +42,27 @@
             />
           </section>
         </header>
-        <main class="d-flex flex-column align-items-center">
-          <section class="city-weather mt-4">
-            <section class="weather-state">
-              <i class="fa fa-sun fa-2xl"></i>
-              <p>cloude</p>
-            </section>
-            <section class="weather-degree">
-              <span> 27°C </span>
-            </section>
+        <main class="position-relative">
+          <section class="not-found d-none">
+            <i class="fa fa-sad-tear"></i>
+            <p>your city not found</p>
           </section>
-          <section class="city-name d-flex mt-4">
-            <span class="me-1 mt-1">
-              <i class="fa fa-location-dot fa-xl text-primary"></i>
-            </span>
-            <h3>Isfahan</h3>
+          <section class="weather-information">
+            <section class="city-weather mt-4">
+              <section class="weather-state">
+                <img id="state-img" />
+                <p id="state-text"></p>
+              </section>
+              <section class="weather-degree">
+                <span id="degree"></span>
+              </section>
+            </section>
+            <section class="city-name d-flex mt-4">
+              <span class="me-1">
+                <i id="city-icon"></i>
+              </span>
+              <h4 id="city-name"></h4>
+            </section>
           </section>
         </main>
       </section>
