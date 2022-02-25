@@ -24,19 +24,40 @@
     <title>Weather App</title>
   </head>
   <body>
-    <main class="d-flex justify-content-center align-items-center">
-      <section class="container-box d-flex justify-content-center p-4">
-        <section class="search-city position-relative">
-          <i class="fa fa-search search-city-icon"></i>
-          <input
-            type="search"
-            name="search-city"
-            id="search-city-input"
-            placeholder="find your city ..."
-          />
-        </section>
+    <section
+      class="main-container d-flex justify-content-center align-items-center"
+    >
+      <section class="container-box p-4">
+        <header>
+          <section class="search-city position-relative">
+            <i class="fa fa-search search-city-icon"></i>
+            <input
+              type="search"
+              name="search-city"
+              id="search-city-input"
+              placeholder="Find your city ..."
+            />
+          </section>
+        </header>
+        <main class="d-flex flex-column align-items-center">
+          <section class="city-weather mt-4">
+            <section class="weather-state">
+              <i class="fa fa-sun fa-2xl"></i>
+              <p>cloude</p>
+            </section>
+            <section class="weather-degree">
+              <span> 27°C </span>
+            </section>
+          </section>
+          <section class="city-name d-flex mt-4">
+            <span class="me-1 mt-1">
+              <i class="fa fa-location-dot fa-xl text-primary"></i>
+            </span>
+            <h3>Isfahan</h3>
+          </section>
+        </main>
       </section>
-    </main>
+    </section>
 
     <!-- FontAwesome scripts -->
     <script

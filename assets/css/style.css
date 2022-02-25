@@ -22,7 +22,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-main {
+.main-container {
   width: 100%;
   height: 100%;
   background: rgba(170, 170, 170, 0.295);
@@ -31,8 +31,8 @@ main {
 /* box style*/
 
 .container-box {
-  width: 17rem;
-  height: 20rem;
+  width: 19rem;
+  height: 21rem;
   margin: 2rem 0;
   background: rgba(255, 255, 255, 0.658);
   border-radius: 1rem;
@@ -50,9 +50,33 @@ main {
   transition: all 0.5s ease-in;
 }
 .search-city-icon:hover {
-  transform: rotate(360);
+  transform: rotate(360deg);
+  color: blueviolet;
 }
 #search-city-input {
   padding: 0.3rem 2rem;
   border-radius: 1rem;
+}
+
+/* city weather style */
+
+.city-weather {
+  width: 15rem;
+  font-size: 1.5rem;
+}
+.weather-state {
+  display: flex;
+  justify-content: space-between;
+}
+.weather-state p {
+  margin-top: 0.4rem;
+}
+.weather-degree {
+  margin-top: 1rem;
+}
+
+/* city name */
+
+.city-name h3 {
+  letter-spacing: 1.2px;
 }
