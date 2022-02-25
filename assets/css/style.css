@@ -41,6 +41,10 @@ body {
 
 /* search section style*/
 
+header {
+  width: 100%;
+}
+
 .search-city-icon {
   position: absolute;
   top: 0.55rem;
@@ -54,7 +58,7 @@ body {
   color: blueviolet;
 }
 #search-input {
-  padding: 0.3rem 2rem;
+  padding: 0.3rem 1.8rem;
   border-radius: 1rem;
 }
 
