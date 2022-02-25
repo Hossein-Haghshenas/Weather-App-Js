@@ -22,6 +22,8 @@ const findCity = () => {
     try {
       const information = await axios.get(url);
       const data = information.data;
+
+      setInfo(data);
     } catch {
       weatherInfo.classList.add("d-none");
       pageNotFound.classList.remove("d-none");
@@ -29,4 +31,24 @@ const findCity = () => {
     }
   };
   getInfo(url);
+
+  const setInfo = (data) => {
+    pageNotFound.classList.add("d-none");
+    weatherInfo.classList.remove("d-none");
+
+    const stateImg = document.querySelector("#state-img");
+    stateImg.setAttribute("src", data.current.condition.icon);
+    stateImg.setAttribute("alt", data.current.condition.text);
+
+    const stateText = document.querySelector("#state-text");
+    stateText.textContent = data.current.condition.text;
+
+    const degree = document.querySelector("#degree");
+    degree.textContent = `${data.current.temp_c} °C`;
+
+    const nameIcon = document.querySelector("#city-icon");
+    nameIcon.className = "fa fa-location-dot fa-xl text-primary";
+    const nameText = document.querySelector("#city-name");
+    nameText.textContent = data.location.name;
+  };
 };
