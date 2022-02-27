@@ -2,8 +2,9 @@ const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-btn");
 
-const pageNotFound = document.querySelector(".not-found");
 const weatherInfo = document.querySelector(".weather-information");
+const firstPage = document.querySelector(".first-page");
+const pageNotFound = document.querySelector(".not-found");
 
 const cityName = document.querySelector(".city-name");
 
@@ -19,6 +20,8 @@ searchForm.addEventListener("submit", (e) => {
 searchBtn.addEventListener("click", eventHandle);
 
 const findCity = () => {
+  firstPage.classList.add("d-none");
+
   const url = `https://api.weatherapi.com/v1/current.json?key=08e3bf692cfa4f90b42141857210109&q=${searchInput.value}`;
   const getInfo = async (url) => {
     try {
