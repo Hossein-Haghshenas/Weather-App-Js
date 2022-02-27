@@ -1,3 +1,4 @@
+const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-btn");
 
@@ -11,8 +12,9 @@ const eventHandle = () => {
   searchInput.value = "";
 };
 
-searchInput.addEventListener("keypress", (e) => {
-  e.code === "Enter" ? eventHandle() : null;
+searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  eventHandle();
 });
 searchBtn.addEventListener("click", eventHandle);
 
