@@ -8,12 +8,16 @@
 *:before {
   margin: 0;
   padding: 0;
-  text-decoration: none;
   list-style: none;
   border: none;
   outline: none;
   box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+}
+
 body {
   background-image: url("./../image/lake-g08951cf02_1920.jpg");
   background-repeat: no-repeat;
@@ -36,7 +40,7 @@ body {
   align-items: center;
   width: 19rem;
   height: 21rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
   background: rgba(204, 204, 204, 0.658);
   border-radius: 1rem;
   box-shadow: 0 0 3px 2px #86868640;
@@ -72,38 +76,56 @@ body {
   text-align: center;
 }
 
-/* city weather style */
+/* city name */
 
-.city-weather {
+.city-name {
+  display: flex;
+  align-items: center;
+}
+
+.city-name h4 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* city weather degree */
+
+.weather-degree {
+  font-size: 1.3rem;
+  margin-top: 0.7rem;
+  padding: 0 0.5rem;
+  background: rgba(255, 255, 255, 0.425);
+  border-radius: 1rem;
+}
+/* city weather state */
+
+.city-weather-state {
   width: 15rem;
   font-size: 1.5rem;
 }
 .weather-information {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
 }
 .weather-state {
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
 }
 .state-img {
   z-index: 10;
 }
 .weather-state p {
-  margin-top: 1rem;
-  font-size: 1rem;
-}
-.weather-degree {
-  margin-top: 1rem;
+  font-size: 1.1rem;
 }
 
-/* city name */
-.city-name span {
-  margin-top: 0.8rem;
+/* footer */
+
+.footer-link {
+  color: #000000;
+  transition: all 0.4s ease-in;
 }
-.city-name h3 {
-  letter-spacing: 1.2px;
+.footer-link:hover {
+  color: #000000d5;
+  text-shadow: 0 1px 1px #8c00ff3a;
 }

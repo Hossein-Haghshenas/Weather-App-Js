@@ -25,9 +25,11 @@
   </head>
   <body>
     <section
-      class="main-container d-flex justify-content-center align-items-center"
+      class="main-container d-flex flex-column justify-content-center align-items-center"
     >
       <section class="container-box p-4">
+        <!-- city search input-->
+
         <header>
           <section class="search-city position-relative">
             <form action="#" id="search-form">
@@ -45,35 +47,59 @@
           </section>
         </header>
         <main class="position-relative">
-          <section class="weather-information d-none">
-            <section class="city-weather mt-4">
-              <section class="weather-state">
-                <img id="state-img" />
-                <p id="state-text"></p>
-              </section>
-              <section class="weather-degree">
-                <span id="degree"></span>
-              </section>
-            </section>
-            <section class="city-name d-flex mt-4">
-              <span class="me-1">
-                <i id="city-icon"></i>
-              </span>
-              <h4 id="city-name"></h4>
-            </section>
-          </section>
+          <!-- starter page -->
 
           <section class="first-page">
-            <i class="fa fa-smile-wink"></i>
+            <i class="fa fa-smile"></i>
             <p>Enter your city name !</p>
           </section>
+
+          <!-- city not found page -->
 
           <section class="not-found d-none">
             <i class="fa fa-sad-tear"></i>
             <p>your city not found</p>
           </section>
+
+          <!-- display weather information -->
+
+          <section class="weather-information d-none">
+            <!-- city name -->
+
+            <section class="city-name mt-4">
+              <span class="me-2 mb-1">
+                <i id="city-icon"></i>
+              </span>
+              <h5 id="city-name"></h5>
+            </section>
+
+            <!-- city current weather degree -->
+
+            <section class="weather-degree">
+              <span id="degree"></span>
+            </section>
+
+            <!-- city current weather state -->
+
+            <section class="city-weather-state mt-2">
+              <section class="weather-state">
+                <img id="state-img" />
+                <p id="state-text"></p>
+              </section>
+            </section>
+          </section>
         </main>
       </section>
+      <footer>
+        <span
+          >Created By
+          <a
+            class="footer-link"
+            href="https://www.instagram.com/hossein_developer"
+            >Hossein-Developer</a
+          ></span
+        >
+      </footer>
     </section>
 
     <!-- axios scripts -->
