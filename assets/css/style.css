@@ -56,10 +56,12 @@ body {
   cursor: pointer;
   transition: all 0.5s ease-in;
 }
+
 .search-city-icon:hover {
   transform: rotate(360deg);
   color: blueviolet;
 }
+
 #search-input {
   padding: 0.3rem 1.8rem;
   border-radius: 1rem;
@@ -103,20 +105,24 @@ body {
   width: 15rem;
   font-size: 1.5rem;
 }
+
 .weather-information {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .weather-state {
   text-align: center;
 }
+
 .state-img {
   z-index: 10;
 }
 .weather-state p {
   font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
 /* footer */
