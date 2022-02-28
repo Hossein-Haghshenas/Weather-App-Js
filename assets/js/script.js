@@ -81,12 +81,14 @@ const findCity = () => {
     const state = data.current.condition.text;
 
     switch (true) {
-      case 5 < temp < 25 && state === "Clear":
-        recommendText.textContent = "Great weather, go for a walk";
+      case (5 < temp < 25 && state === "Clear") ||
+        (5 < temp < 25 && state === "Sunny"):
+        recommendText.textContent = `Great weather, go for a walk`;
         break;
       case state === "Partly cloudy" ||
         state === "cloudy" ||
-        state === "Patchy rain possible":
+        state === "Patchy rain possible" ||
+        state === "Overcast":
         recommendText.textContent = `The weather is cloudy, it may rain`;
         break;
       case state === "Light rain" || state === "rain":
@@ -96,16 +98,16 @@ const findCity = () => {
         recommendText.textContent = `The snow is heavy. Do not leave the house`;
         break;
       case state === "Sunny":
-        recommendText.textContent = `Do not forget the smoked glasses`;
+        recommendText.textContent = `Do not forget the Sun glasses`;
         break;
       case state === "Mist":
         recommendText.textContent = `The weather is foggy. Drive with caution`;
         break;
       case temp > 20:
-        recommendText.textContent = "The weather is hot. Wear a cool outfit";
+        recommendText.textContent = `The weather is hot. Wear a cool outfit`;
         break;
       case temp < 2:
-        recommendText.textContent = "The weather is cold. Wear a warm outfit";
+        recommendText.textContent = `The weather is cold. Wear a warm outfit`;
         break;
       default:
         recommendText.textContent = `The weather is ${state}`;
